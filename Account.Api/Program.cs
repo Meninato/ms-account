@@ -16,10 +16,5 @@ var app = builder.Build();
 app.UseSerilogRequestLogging();
 app.UseHttpsRedirection();
 
-app.MapGet("/z", (ILogger<Program> logger) =>
-{
-    logger.LogInformation("Hello!");
-});
-
 app.MapControllers();
-app.Run();
+await app.RunAsync();
