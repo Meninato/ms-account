@@ -8,11 +8,11 @@ Your gonna need these three images:
 - docker pull postgres
 - docker pull masstransit/rabbitmq
 
-docker volume create pgsql-data  /var/lib/postgresql/data
-docker volume create pgadmin     /var/lib/pgadmin
+docker volume create pgsql-data  /var/lib/postgresql/data \
+docker volume create pgadmin     /var/lib/pgadmin         \
 docker network auths-network
 
 docker inspect [network-name]
 
-Add all containers into the same network
-docker network connect [network] [container]
+Add all containers into the same network        \
+docker network connect [network] [container]    
