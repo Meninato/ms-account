@@ -15,18 +15,18 @@ public class GlobalExceptionHandler : IExceptionHandler
         Exception exception, CancellationToken cancellationToken)
     {
         var response = httpContext.Response;
-        ErrorResponse errorResponse;
+        AppErrorResponse errorResponse;
 
         switch (exception)
         {
             case AppException e:
                 response.StatusCode = e.StatusCode;
-                errorResponse = ErrorResponse.From(e);
+                errorResponse = AppErrorResponse.From(e);
                 break;
             default:
                 _logger.LogError(exception, exception.Message);
                 response.StatusCode = StatusCodes.Status500InternalServerError;
-                errorResponse = ErrorResponse.From(exception);
+                errorResponse = AppErrorResponse.From(exception);
                 break;
         }
 

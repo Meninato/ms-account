@@ -1,16 +1,16 @@
 ﻿namespace Account.Api.Core;
 
-public class ErrorResponse
+public class AppErrorResponse
 {
-    private ErrorResponse() { }
+    private AppErrorResponse() { }
 
     public required int Status { get; set; }
     public required string Message { get; set; }
     public List<InvalidModelError> Errors { get; set; } = new List<InvalidModelError>();
 
-    public static ErrorResponse From(AppException e)
+    public static AppErrorResponse From(AppException e)
     {
-        return new ErrorResponse()
+        return new AppErrorResponse()
         {
             Status = e.StatusCode,
             Message = e.Message,
@@ -18,9 +18,9 @@ public class ErrorResponse
         };
     }
 
-    public static ErrorResponse From(Exception e) => new ErrorResponse()
+    public static AppErrorResponse From(Exception e) => new AppErrorResponse()
     {
         Status = StatusCodes.Status500InternalServerError,
-        Message = "Internal server error"
+        Message = "Something went wrong."
     };
 }

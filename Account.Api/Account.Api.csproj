@@ -17,14 +17,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Helpers\" />
-    <Folder Include="Models\Validations\" />
-    <Folder Include="Models\Responses\" />
-    <Folder Include="Models\Requests\" />
-    <Folder Include="V1\Controllers\" />
+    <Folder Include="V1\Models\Validations\" />
     <Folder Include="V1\Models\Responses\" />
     <Folder Include="V1\Models\Requests\" />
-    <Folder Include="V1\Services\" />
   </ItemGroup>
 
 </Project>

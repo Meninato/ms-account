@@ -1,4 +1,4 @@
-﻿namespace Account.Api.Services.V1;
+﻿namespace Account.Api.V1.Services;
 
 public interface IAccountService
 {

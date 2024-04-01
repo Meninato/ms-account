@@ -7,9 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Account.Api", "Account.Api\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Account.Data", "Account.Data\Account.Data.csproj", "{61D85776-30D0-4C94-A353-8C8C8FD8E67A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Account.Messaging", "Account.Messaging\Account.Messaging.csproj", "{65B9844D-A3E7-4A31-A612-4E95404DC2F6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Account.Messaging", "Account.Messaging\Account.Messaging.csproj", "{65B9844D-A3E7-4A31-A612-4E95404DC2F6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Account.Consumer", "Account.Consumer\Account.Consumer.csproj", "{C6F64033-64B3-4BAC-9A49-C3A684D27AF1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Account.Consumer", "Account.Consumer\Account.Consumer.csproj", "{C6F64033-64B3-4BAC-9A49-C3A684D27AF1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Account.Jwt", "Account.Jwt\Account.Jwt.csproj", "{395454BB-A8A7-48FD-91CC-A0555CEB9D72}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{C6F64033-64B3-4BAC-9A49-C3A684D27AF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C6F64033-64B3-4BAC-9A49-C3A684D27AF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C6F64033-64B3-4BAC-9A49-C3A684D27AF1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{395454BB-A8A7-48FD-91CC-A0555CEB9D72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{395454BB-A8A7-48FD-91CC-A0555CEB9D72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{395454BB-A8A7-48FD-91CC-A0555CEB9D72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{395454BB-A8A7-48FD-91CC-A0555CEB9D72}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,7 +1,8 @@
-﻿using Asp.Versioning;
+﻿using Account.Api.Core;
+using Asp.Versioning;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Account.Api.Controllers.V1;
+namespace Account.Api.V1.Controllers;
 
 [ApiController]
 [ApiVersion(1)]
