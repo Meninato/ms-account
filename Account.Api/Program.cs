@@ -1,6 +1,8 @@
 using Account.Api.Core;
 using Asp.Versioning;
 using Serilog;
+using Account.Data;
+using Account.Jwt;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -25,7 +27,16 @@ builder.Services.AddApiVersioning(options =>
     options.ReportApiVersions = true;
 }).AddMvc();
 
+builder.Services.AddApplicationDbContext();
+builder.Services.AddJwtTokenProvider();
+
 var app = builder.Build();
+
+using (var scope = app.Services.CreateScope())
+{
+    var seeder = scope.ServiceProvider.GetService<IDbSeeder>()!;
+    seeder.Seed();
+}
 
 app.UseSerilogRequestLogging();
 app.UseHttpsRedirection();

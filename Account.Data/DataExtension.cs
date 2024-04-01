@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace Account.Data;
 
-public static class AccountDataExtension
+public static class DataExtension
 {
-    public static void AddAccountDbContext(this IServiceCollection services)
+    public static void AddApplicationDbContext(this IServiceCollection services)
     {
         services.AddDbContext<DataContext>();
         services.AddScoped<IDbSeeder, DbSeeder>();
