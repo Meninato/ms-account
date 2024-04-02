@@ -17,10 +17,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="V1\Models\Validations\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\Account.Data\Account.Data.csproj" />
     <ProjectReference Include="..\Account.Jwt\Account.Jwt.csproj" />
     <ProjectReference Include="..\Account.Messaging\Account.Messaging.csproj" />

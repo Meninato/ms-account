@@ -1,7 +1,7 @@
 ﻿using FluentValidation.Results;
 using FluentValidation;
 
-namespace Account.Api.Helpers;
+namespace Account.Api.Core;
 
 public class AppAbstractValidator<T> : AbstractValidator<T>
 {
