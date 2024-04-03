@@ -19,11 +19,13 @@ public class DbSeeder : IDbSeeder
 
     public void Seed()
     {
-        _context.Database.EnsureCreated();
+        if(_context.Database.CanConnect())
+        {
+            _context.Database.EnsureCreated();
 
-        SeedRoles();
-        SeedAccounts();
-
+            SeedRoles();
+            SeedAccounts();
+        }
     }
 
     private void SeedAccounts()

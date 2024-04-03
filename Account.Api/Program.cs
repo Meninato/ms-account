@@ -7,6 +7,7 @@ using FluentValidation;
 using Account.Api.Helpers;
 using V1Services = Account.Api.V1.Services;
 using MassTransit;
+using Account.Api.Options;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -31,18 +32,14 @@ builder.Services.AddApiVersioning(options =>
     options.ReportApiVersions = true;
 }).AddMvc();
 
-//TODO: create rabbitMQ host, user and password env variables
+builder.Services.ConfigureOptions<EnvironmentVariableSetup>();
+builder.Services.ConfigureOptions<RabbitMqTransportOptionsSetup>();
 builder.Services.AddMassTransit(x =>
 {
     x.SetKebabCaseEndpointNameFormatter();
 
     x.UsingRabbitMq((context, cfg) =>
     {
-        cfg.Host("localhost", "/", h =>
-        {
-            h.Username("guest");
-            h.Password("guest");
-        });
         cfg.ConfigureEndpoints(context);
     });
 });
